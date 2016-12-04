@@ -6,4 +6,4 @@ Directly working on mxGraph source code rather than adding jar for easiler debug
 Basically all the magic things happen in mxPerimeterFunction RectanglePerimeter (called by mxGraphView.updateFloatingTerminalPoints) for my case.
 
 ### Run and build
-Run java application mxGraphSample.Layout
+Run java application sample.mxGraphSample
