@@ -13,6 +13,7 @@ import com.mxgraph.util.mxPoint;
 import com.mxgraph.view.mxGraph;
 
 public class mxGraphSample extends JFrame {
+
   private static final long serialVersionUID = -578683911307318455L;
   private GraphControl graphControl;
 
@@ -30,15 +31,15 @@ public class mxGraphSample extends JFrame {
       // edgeStyle=elbowEdgeStyle works like orthogonal
       // entryX=0;entryY=0; changes connection point to higher vertex
 
-      Object object1 = graph.insertVertex(parent, "state1", "state1", 0, 0, 200, 100);
-      Object object2 = graph.insertVertex(parent, "state2", "state2", 400, 300, 200, 100);
-      // Object object2 = graph.insertVertex(parent, "state2", "state2", 300, 80, 200, 100);
+      Object object1 = graph.insertVertex(parent, "state1", "state1", 100, 100, 200, 100);
+      Object object2 = graph.insertVertex(parent, "state2", "state2", 500, 300, 200, 100);
       mxCell cell = (mxCell) graph.insertEdge(parent, null, "transition1", object1, object2,
           "edgeStyle=noEdgeStyle;elbow=horizontal;orthogonal=1;" + "entryPerimeter=1;");
       cell.toString();
       List<mxPoint> points = new ArrayList<mxPoint>();
-      points.add(new mxPoint(300, 600));
-      cell.getGeometry().setPoints(points);
+      points.add(new mxPoint(400, 600));
+      // for testing elbow point
+      // cell.getGeometry().setPoints(points);
     } finally {
       graph.getModel().endUpdate();
     }
